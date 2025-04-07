@@ -4,33 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Exam Seat Finder</title>
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="script.js"></script>
 </head>
 <body>
-  <div>
-    <nav class="navbar">
+  <div class="container mx-auto">
+    <nav>
       <div class="navbar-brand">
         <h1>Exam Seat Finder</h1>
       </div>
     </nav>
 
     <main>
-      <section id="home">
-        <h2>Find Your Exam Seat Easily</h2>
-        <form id="seat-form">
+      <article id="home">
+        <h2>Find Your Exam Seat Quickly & Easily</h2>
+
+        <form id="seat-form" class="flex flex-col">
           <label for="user-id">Enter your Name or London Met ID:</label>
+
           <input type="text" id="user-id" name="user-id" required />
+
           <button type="submit">Find Seat</button>
         </form>
-        <div id="result"></div>
-      </section>
+
+        <div id="result" class="mt-6"></div>
+      </article>
     </main>
   </div>
 </body>
