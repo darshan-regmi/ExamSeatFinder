@@ -32,13 +32,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         resultDiv.innerHTML = found
-          ? resultText
-          : "No seat found for the entered name or ID.";
+          ? `
+            <h2>Seat Information</h2>
+            ${resultText}
+          `
+          : `
+            <h2>No Seat Found</h2>
+            <p>No seat found for the entered name or ID.</p>
+          `;
 
       })
       .catch(function(error) {
         console.error("Error:", error);
-        resultDiv.textContent = "There was an error loading the seat data.";
+        resultDiv.innerHTML = `
+          <h2>Error Loading Seat Data</h2>
+          <p>There was an error loading the seat data.</p>
+        `;
       });
   });
 });
